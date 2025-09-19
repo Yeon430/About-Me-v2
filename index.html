@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남연우의 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- ✅ Font Awesome 불러오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Yeonwoo Nam</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                
+                <div class="hero-image">
+                    <div class="profile-placeholder">
+                        <span></span>
+                        <p><img src="Profile.jpg" alt="프로필 사진" width="250"></p>
+                    </div>
+                </div>
+
+                <div class="hero-text">
+                    <h1>Hello, World! 👋</h1>
+                    <h2>I'm Yeonwoo Exploring <span class="highlight">Full-Stack Development</span></h2>
+                    <p>Broadening my expertise through new technologies</p>
+                    <a href="#about" class="cta-button">Learn More</a>
+
+                    <!-- 아이콘 링크 -->
+                    <div class="contact-icons">
+                        <a href="mailto:oyeon430@gmail.com" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/Yeon430" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yeonwoo-nam-b78350328/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Hello! I'm Yeonwoo Nam</h3>
+                        <p>
+                            I am currently participating in the Global PBL Full-Stack Development program. <br>
+                        </p>
+                        <p>
+                            Over 13 weeks, I aim to build a strong foundation, learn modern technologies like React and Node.js,
+                            and develop web applications that solve real-world problems.
+                        </p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h4>Major</h4>
+                                <p>Mechanical & Biomedical Eng</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Year</h4>
+                                <p>Senior</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Goal</h4>
+                                <p>Full-Stack Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <!-- Interests Section -->
+        <section id="interests" class="interests">
+            <div class="container">
+                <h2 class="section-title">Interests</h2>
+                <div class="interests-grid">
+                    <!-- Web Development -->
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Interested in building intuitive and responsive websites that enhance user experience.</p>
+                    </div>
+
+                    <!-- Artificial Intelligence -->
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Artificial Intelligence</h3>
+                        <p>Passionate about applying machine learning and deep learning to create intelligent services.</p>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data Science</h3>
+                        <p>Focused on collecting, analyzing, and visualizing data to generate insights and support data-driven decisions.</p>
+                    </div>
+
+                    <!-- User Research (Hidden by default) -->
+                    <div class="interest-card hidden-card" style="display: none;">
+                        <div class="interest-icon"><i class="fas fa-users"></i></div>
+                        <h3>User Research</h3>
+                        <p>Exploring surveys, interviews, and usability testing to guide product direction and improve user experience.</p>
+                    </div>
+
+                    <!-- UI/UX Design (Hidden by default) -->
+                    <div class="interest-card hidden-card" style="display: none;">
+                        <div class="interest-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Aiming to design clean and intuitive interfaces that ensure accessibility and ease of use for everyone.</p>
+                    </div>
+                </div>
+
+                <!-- Show More Button -->
+                <div class="more-button-wrapper">
+                    <button id="show-more">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Learning Path</h2>
+                <div class="skills-content">
+                    <div class="skill-category">
+                        <h3>In Progress</h3>
+                        <div class="skill-list">
+                            <div class="skill-item beginner">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-item beginner">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-item beginner">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Upcoming</h3>
+                        <div class="skill-list">
+                            <div class="skill-item future">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Planned</span>
+                            </div>
+                            <div class="skill-item future">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">Planned</span>
+                            </div>
+                            <div class="skill-item future">
+                                <span class="skill-name">React Native</span>
+                                <span class="skill-level">Planned</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-list programming-languages">
+                            <div class="skill-item language">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item language">
+                                <span class="skill-name">C++</span>
+                            </div>
+                            <div class="skill-item language">
+                                <span class="skill-name">MATLAB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch! ✨</h3>
+                        <p>I’m always open to connecting with peers and exploring opportunities for collaboration.</p>
+                        
+                        <div class="contact-links">
+                            <a href="oyeon430@gmail.com" class="contact-link">
+                                <span class="contact-icon">✉️</span>
+                                <span>oyeon430@gmail.com</span>
+                            </a>
+                            <a href="https://github.com/Yeon430" class="contact-link" target="_blank">
+                                <span class="contact-icon">🐙</span>
+                                <span>https://github.com/Yeon430</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yeonwoo-nam-b78350328/" class="contact-link" target="_blank">
+                                <span class="contact-icon">💼</span>
+                                <span>https://www.linkedin.com/in/yeonwoo-nam-b78350328/</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form>
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <textarea placeholder="Enter your message..." rows="5" required></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 남연우. 모든 권리 보유.</p>
+            <p>국민대학교 Global PBL Fall 2025 - Week 1 프로젝트</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 예제가 포함된 홈페이지</title>
+    <link rel="stylesheet" href="style-simple.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <div class="header">
+        <h1>홍길동의 홈페이지</h1>
+        <p>안녕하세요! 저를 소개합니다.</p>
+    </div>
+
+    <!-- 메인 내용 -->
+    <div class="container">
+        
+        <!-- 자기소개 섹션 -->
+        <div class="section">
+            <h2>👋 자기소개</h2>
+            <!-- onclick 추가: 이미지 클릭하면 인사 -->
+            <img src="https://via.placeholder.com/200" 
+                 alt="프로필 사진" 
+                 class="profile-img"
+                 onclick="alert('안녕하세요! 반갑습니다 😊')"
+                 style="cursor: pointer;">
+            <p style="text-align: center; color: #888; font-size: 14px;">
+                ↑ 사진을 클릭해보세요!
+            </p>
+            <p>
+                안녕하세요! 저는 <strong>홍길동</strong>입니다.<br>
+                국민대학교 경영학과 3학년에 재학중입니다.<br>
+                이번 학기에 웹 개발을 처음 배우고 있습니다.
+            </p>
+        </div>
+
+        <!-- 간단한 버튼 예제 -->
+        <div class="section">
+            <h2>🎮 JavaScript 연습</h2>
+            <p>아래 버튼들을 클릭해보세요!</p>
+            
+            <button onclick="alert('안녕하세요!')" 
+                    style="background-color: #4CAF50; color: white; padding: 10px 20px; 
+                           border: none; border-radius: 5px; margin: 5px; cursor: pointer;">
+                인사하기
+            </button>
+            
+            <button onclick="alert('현재 시간: ' + new Date().toLocaleTimeString())" 
+                    style="background-color: #2196F3; color: white; padding: 10px 20px; 
+                           border: none; border-radius: 5px; margin: 5px; cursor: pointer;">
+                현재 시간
+            </button>
+            
+            <button onclick="changeBackgroundColor()" 
+                    style="background-color: #ff9800; color: white; padding: 10px 20px; 
+                           border: none; border-radius: 5px; margin: 5px; cursor: pointer;">
+                배경색 바꾸기
+            </button>
+        </div>
+
+        <!-- 관심 분야 섹션 -->
+        <div class="section">
+            <h2>💡 관심 분야</h2>
+            <ul id="interest-list">
+                <li>웹 개발 - 홈페이지 만들기</li>
+                <li>디자인 - 예쁜 웹사이트 디자인</li>
+                <li>창업 - 나만의 서비스 만들기</li>
+                <li>마케팅 - 디지털 마케팅</li>
+            </ul>
+            <button onclick="addInterest()" 
+                    style="background-color: #4CAF50; color: white; padding: 10px 20px; 
+                           border: none; border-radius: 5px; margin-top: 10px; cursor: pointer;">
+                관심 분야 추가하기
+            </button>
+        </div>
+
+        <!-- 방문자 카운터 (가짜) -->
+        <div class="section">
+            <h2>📊 방문자 수</h2>
+            <p style="font-size: 24px; text-align: center;">
+                <span id="visitor-count">1</span>명
+            </p>
+            <p style="text-align: center; color: #888; font-size: 14px;">
+                (새로고침할 때마다 증가합니다!)
+            </p>
+        </div>
+
+    </div>
+
+    <!-- 푸터 영역 -->
+    <div class="footer">
+        <p>© 2025 홍길동. 모든 권리 보유.</p>
+        <p>Global PBL Week 1 프로젝트</p>
+    </div>
+
+    <!-- JavaScript 코드 -->
+    <script>
+        // 페이지 로드시 방문자 수 증가
+        window.onload = function() {
+            // localStorage에서 방문 횟수 가져오기
+            let count = localStorage.getItem('visitCount');
+            if (count === null) {
+                count = 1;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            
+            // 저장하고 표시
+            localStorage.setItem('visitCount', count);
+            document.getElementById('visitor-count').textContent = count;
+            
+            console.log("홈페이지에 오신 것을 환영합니다!");
+        };
+
+        // 배경색 바꾸기 함수
+        function changeBackgroundColor() {
+            // 랜덤 색상 배열
+            const colors = ['#ffebee', '#e8f5e9', '#e3f2fd', '#fff3e0', '#fce4ec'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // 관심 분야 추가 함수
+        function addInterest() {
+            const newInterest = prompt("새로운 관심 분야를 입력하세요:");
+            if (newInterest) {
+                const list = document.getElementById('interest-list');
+                const newItem = document.createElement('li');
+                newItem.textContent = newInterest;
+                list.appendChild(newItem);
+            }
+        }
+    </script>
+</body>
+</html>
